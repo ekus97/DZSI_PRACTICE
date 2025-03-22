@@ -69,14 +69,6 @@ header {
   width: 100%;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1330px;
-}
-
 header .row {
   position: relative;
   display: flex;
@@ -721,6 +713,9 @@ header .hamburger-menu span:last-child {
   header .nav-text-link {
     font-size: 18px;
   }
+  header ul.nav-menus > li {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -766,6 +761,7 @@ header .hamburger-menu span:last-child {
   header ul.nav-menus > li > .nav-text-link {
     color: #0f273f;
     cursor: default;
+    pointer-events: none;
   }
   header .nav-text-link:hover:after {
     width: 0;
@@ -888,6 +884,7 @@ header .hamburger-menu span:last-child {
   }
   .inner-text-menu .inner-item {
     padding: 0px;
+    cursor: default;
   }
   .inner-text-menu .inner-item.active:after {
     background: url(https://dzsi.com/wp-content/themes/dzs/dist/images/icons/down-arrow-white.svg)
@@ -923,9 +920,10 @@ header .hamburger-menu span:last-child {
     margin-top: 0px;
     padding-top: 0px;
   }
-  .col-two {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .col-two,
+  .heading-content {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
   .menu-right {
     display: none;
@@ -1071,7 +1069,8 @@ a {
   flex: 0 0 calc(100% - 107px);
   max-width: calc(100% - 107px);
 }
-.col-two {
+.col-two,
+.second-hero-page .col-two {
   flex: 0 0 50%;
   max-width: 50%;
 }
@@ -2325,11 +2324,11 @@ ul li {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-two,
-  .heading-content {
+  /* .col-two,
+ {
     flex: 0 0 100%;
     max-width: 100%;
-  }
+  } */
   .magazine-wrapper {
     height: 330px;
   }

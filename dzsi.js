@@ -19,6 +19,10 @@
         navMenu.style.display = "none"; // Hide the nav menu
         hamburgerIcon.classList.remove("active"); // Remove the 'active' class from the hamburger icon
       }
+      if (window.innerWidth <= 1024) {
+        navMenu.style.display = "none"; // Hide the nav menu
+        hamburgerIcon.classList.remove("active"); // Remove the 'active' class from the hamburger icon
+      }
     });
     $(".icon").click(function () {
       $(".items").hide();
@@ -78,6 +82,19 @@
         $(this).parents(".sub-menu").find(".inner-item").removeClass("active");
         $(this).addClass("active");
 
+        // var activeTab = $(this).find("a").attr("href");
+        // $(this).parents(".sub-menu").find(".tab-content").hide();
+        // $(activeTab).show();
+
+        var activeTab = $(this).find("a").attr("href").split("#")[1];
+        $(this).parents(".sub-menu").find(".tab-content").hide();
+        $("#" + activeTab).show();
+        return false;
+      }
+      if (winWidth < 767) {
+        $(this).parents(".sub-menu").find(".inner-item").removeClass("active");
+        $(this).addClass("active");
+
         var activeTab = $(this).find("a").attr("href");
         $(this).parents(".sub-menu").find(".tab-content").hide();
         $(activeTab).show();
@@ -93,9 +110,13 @@
         $(this).parents(".sub-menu").find(".inner-item").removeClass("active");
         $(this).addClass("active");
 
-        var activeTab = $(this).find("a").attr("href");
+        // var activeTab = $(this).find("a").attr("href");
+        // $(this).parents(".sub-menu").find(".tab-content").hide();
+        // $(activeTab).show();
+
+        var activeTab = $(this).find("a").attr("href").split("#")[1];
         $(this).parents(".sub-menu").find(".tab-content").hide();
-        $(activeTab).show();
+        $("#" + activeTab).show();
         return false;
       }
     });
@@ -129,7 +150,9 @@
         // If the window width is 767 or more, hide all submenus
         $(".mobile-inner-menu").slideUp(400);
         $(this).removeClass("mobile-active");
+
       }
+
     });
 
     $(window).on("resize", function () {
