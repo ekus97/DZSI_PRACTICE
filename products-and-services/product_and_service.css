@@ -1,0 +1,209 @@
+.pink-blue-bg {
+  position: relative;
+  margin-top: 70px;
+}
+.pink-blue-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(to right, #c3c, #62b8e7);
+  clip-path: ellipse(305% 65% at 213% 29%);
+}
+.second-hero-img {
+  max-width: 610px;
+  margin: auto;
+  text-align: center;
+  max-height: 498px;
+}
+
+.second-hero-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: 0;
+  vertical-align: top;
+  object-fit: contain;
+  max-height: 498px;
+}
+.heading-max {
+  max-width: 1070px;
+}
+.heading-col-six,
+.heading-col-four {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 1201px) {
+  .curved-grey-bg {
+    position: relative; /* Ensure the parent has a position context */
+  }
+
+  .curved-grey-bg::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://dzsi.com/wp-content/themes/dzs/dist/images/patterns/grey-background-bottom-left.png)
+      no-repeat center;
+    z-index: 0;
+  }
+}
+
+.cards-icon {
+  transform: translateY(24%);
+  transition: all 0.3s ease-in-out;
+}
+.card-icon_1 .card-wrapper > .row {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  display: flex;
+}
+.card-icon_1 .card-with-icon {
+  position: relative;
+  overflow: hidden;
+  padding: 36px;
+  border-radius: 8px;
+  height: 100%;
+  min-height: 372px;
+  max-height: 372px;
+  margin: 25px 15px 0;
+  display: flex;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.cards-icon .card-text {
+  margin-top: 20px;
+  transform: translateY(24%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.card-with-icon:hover .card__bg {
+  background: linear-gradient(to right, #c3c -34%, #660e99 130%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.card-icon_1 .card-with-icon .card__bg {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-icon_1 .card-with-icon:hover .cards-icon,
+.card-icon_1 .card-with-icon:hover .card__bg,
+.card-icon_1 .card-with-icon:hover .card-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-icon_1 .card-with-icon:hover .c-img {
+  filter: invert(50%) sepia(72%) saturate(38%) hue-rotate(-20deg)
+    brightness(158%) contrast(126%);
+}
+.c-icon {
+  max-width: 105px;
+  height: 85px;
+  margin: 0 auto 13px;
+}
+.c-icon img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border: 0;
+  vertical-align: top;
+  object-fit: contain;
+}
+.card-icon_1 .col-three {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+}
+/* --------Slick Slider Settings------------ */
+.card-icon_1 .card-wrapper {
+  width: 100%;
+  max-width: initial;
+}
+@media (max-width: 1024px) {
+  .card-icon_1 .slider-wrap {
+    width: calc(100% - 40px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.card-icon_1 .slick-arrow.slick-prev {
+  background: url(https://dzsi.com/wp-content/themes/dzs/assets/images/icons/prev-triangle_arrow.svg)
+    no-repeat;
+  background-position: center;
+  background-size: 100%;
+  left: -15px;
+}
+.card-icon_1 .slick-arrow.slick-next {
+  background: url(https://dzsi.com//wp-content/themes/dzs/assets/images/icons/next-triangle_arrow.svg)
+    no-repeat;
+  background-position: center;
+  background-size: 100%;
+  right: -15px;
+}
+.card-icon_1 .slick-arrow.slick-disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.media-wrapper {
+  max-width: 630px;
+  height: 409px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border: solid 1px #fff;
+  border-radius: 8px;
+  position: relative;
+}
+.media-wrapper img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* -------------------- */
+@media (max-width: 1200px) {
+  .pink-blue-bg::before {
+    clip-path: none;
+  }
+  .curved-grey-bg {
+    background-color: #e5e5e5;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .full-width-content .wysiwyg-content {
+    margin-top: 0;
+  }
+}
+@media (max-width: 991px) {
+  section {
+    padding: 68px 0px;
+  }
+}
+@media (max-width: 767px) {
+  section {
+    padding: 55px 0px;
+  }
+  .second-hero-img img {
+    max-width: 300px;
+  }
+  .full-width-content .wysiwyg-content {
+    margin-top: 0;
+  }
+  .media-wrapper {
+    height: auto;
+    max-width: 300px;
+    margin: auto;
+  }
+}
